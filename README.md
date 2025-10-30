@@ -9,9 +9,26 @@ Cette configuration permet de se connecter à distance à la machine Ubuntu et d
 <p>La première étape a consisté à installer et activer le serveur OpenSSH sur Ubuntu.  
 Les commandes utilisées ont été : </p>
   <p>
+
+  **sudo apt install openssh-server -y** pour installer le paquet
+   ![Installation OpenSSH](Captures/installation_OpenSSH.png)
+  </p>
+ 
+  <p>
   
-  **sudo apt install openssh-server -y** pour installer le serveur OpenSSH</p>
- , puis `systemctl status ssh` pour vérifier que le service était bien actif. 
+  Puis **systemctl status ssh** pour vérifier que le service était bien actif. 
+  Après vérification on a constaté que le service n’était pas activé, il a donc fallu démarrer et activer SSH à l’aide des commandes
+suivantes :
+**sudo systemctl start ssh**
+**sudo systemctl enable ssh**
+![Activation service](Captures/vrf_service.png)
+</p>
 
+<p>
 
-![Installation OpenSSH](Captures/installation_OpenSSH.png)
+L’adresse IP de la machine virtuelle a ensuite été identifiée avec **ip a**.  
+Au départ, la configuration réseau était en mode NAT (exemple : 10.0.2.x), ce qui ne permettait pas une connexion directe depuis Windows.  
+Pour résoudre ce problème, l’adaptateur réseau a été configuré en mode « Pont », ce qui a permis à Ubuntu et Windows d’être sur le même réseau local avec une adresse du type 192.168.x.x.  
+![Adresse IP](Captures/IP-a.png)
+</p>
+
