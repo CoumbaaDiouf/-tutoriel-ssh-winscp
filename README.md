@@ -10,4 +10,4 @@ Cette configuration permet de se connecter à distance à la machine Ubuntu et d
 Une fois le service activé, nous avons identifié l’adresse IP de la machine virtuelle grâce à la commande ip a.
 </p>
 
-![Installation OpenSSH](Captures\installation_OpenSSH.png)
+![Installation OpenSSH](Captures/installation_OpenSSH.png)
