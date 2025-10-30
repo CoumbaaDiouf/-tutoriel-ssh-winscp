@@ -7,4 +7,5 @@ Il montre aussi comment transférer des fichiers **dans les deux sens** (Windows
 <p>Sur la machine virtuelle Ubuntu, nous avons installé et activé le serveur SSH afin de permettre la connexion distante.</p>
 ### Commandes utilisées
 <p>Pour installer le paquet: Sudo apt install openssh-server-y </p>
-<img source=>
+<img source=Captures/installation_OpenSSH.png alt=installation openssh>
+
