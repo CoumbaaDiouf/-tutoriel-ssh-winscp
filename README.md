@@ -11,6 +11,7 @@ Les commandes utilisées ont été : </p>
   <p>
 
   **sudo apt install openssh-server -y** pour installer le paquet
+
    ![Installation OpenSSH](Captures/installation_OpenSSH.png)
   </p>
  
@@ -19,17 +20,20 @@ Les commandes utilisées ont été : </p>
   Puis **systemctl status ssh** pour vérifier que le service était bien actif. 
   Après vérification on a constaté que le service n’était pas activé, il a donc fallu démarrer et activer SSH à l’aide des commandes
 suivantes :
+
 **sudo systemctl start ssh**
 
 **sudo systemctl enable ssh**
+
 ![Activation service](Captures/vrf_service.png)
 </p>
 
 <p>
 
 L’adresse IP de la machine virtuelle a ensuite été identifiée avec **ip a**.  
-Au départ, la configuration réseau était en mode NAT (exemple : 10.0.2.x), ce qui ne permettait pas une connexion directe depuis Windows.  
-Pour résoudre ce problème, l’adaptateur réseau a été configuré en mode « Pont », ce qui a permis à Ubuntu et Windows d’être sur le même réseau local avec une adresse du type 192.168.x.x.  
+Au départ, la configuration réseau était en mode NAT (10.0.2.x), ce qui ne permettait pas une connexion directe depuis Windows.  
+Pour résoudre ce problème, l’adaptateur réseau a été configuré en mode « Pont », ce qui a permis à Ubuntu et Windows d’être sur le même réseau local avec une adresse du type 192.168.x.x. 
+
 ![Adresse IP](Captures/IP-a.png)
 </p>
 
@@ -50,15 +54,21 @@ Une fois la connexion établie, l’interface de WinSCP a permis de visualiser l
 ## 🔄 Étape 3 : Transfert de fichiers bidirectionnel
 <p>
 
-- **Test 1** : transfert d’un fichier créé sous Windows vers Ubuntu.  
+- **Test 1** : transfert d’un fichier créé sous Windows vers Ubuntu.
+
 ![Envoie vers /home/coumba/*,*](Captures/Panneauenvoie.png)
+
 
 ![Envoie vers /home/coumba/*,*](Captures/envoieversubuntu.png)
 
-- **Test 2** : transfert d’un fichier créé sous Ubuntu vers Windows.  
+
+- **Test 2** : transfert d’un fichier créé sous Ubuntu vers Windows. 
+
 ![Envoie vers /home/coumba/*,*](Captures/Panneauenvoie1.png)
 
+
 ![Envoie vers /home/coumba/*,*](Captures/envoieverswindows.png)
+
 Ces échanges valident la bonne communication entre les deux systèmes.</p>
 
 ## Conclusion
