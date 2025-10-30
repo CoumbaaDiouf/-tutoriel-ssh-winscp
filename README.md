@@ -7,6 +7,7 @@ Cette configuration permet de se connecter à distance à la machine Ubuntu et d
 
 ## 1. Installation d'OpenSSH Server sur Ubuntu
 <p>Sur la machine virtuelle Ubuntu, nous avons installé et activé le serveur SSH afin de permettre la connexion distante.</p>
+
 ### Commandes utilisées
 <p>Pour installer le paquet: Sudo apt install openssh-server-y </p>
 
