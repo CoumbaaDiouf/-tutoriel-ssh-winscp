@@ -6,8 +6,12 @@ Cette configuration permet de se connecter à distance à la machine Ubuntu et d
 </p>
 
 ## 1. Installation d'OpenSSH Server sur Ubuntu
-<p>La première étape a consisté à installer et activer le serveur OpenSSH sur Ubuntu. Pour cela, la commande apt install openssh-server a été utilisée, suivie d’une vérification avec systemctl status ssh.
-Une fois le service activé, nous avons identifié l’adresse IP de la machine virtuelle grâce à la commande ip a.
-</p>
+<p>La première étape a consisté à installer et activer le serveur OpenSSH sur Ubuntu.  
+Les commandes utilisées ont été : </p>
+  <p>
+  
+  **sudo apt install openssh-server -y** pour installer le serveur OpenSSH</p>
+ , puis `systemctl status ssh` pour vérifier que le service était bien actif. 
+
 
 ![Installation OpenSSH](Captures/installation_OpenSSH.png)
